@@ -1,4 +1,4 @@
-import 'package:bank_dashboard/core/widgets/custom_drawer.dart';
+import 'package:bank_dashboard/core/widgets/custom_drawer/custom_drawer.dart';
 import 'package:flutter/material.dart';
 
 class OverviewDesktopLayout extends StatelessWidget {
