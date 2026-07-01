@@ -20,9 +20,10 @@ class _CustomDrawerListViewState extends State<CustomDrawerListView> {
           return CustomDrawerItem(
             isSelected: currentIndex == index,
             onTap: () {
-              currentIndex = index;
-              if (currentIndex == index) {}
-              setState(() {});
+              if (currentIndex != index) {
+                currentIndex = index;
+                setState(() {});
+              }
             },
             drawerModel: DrawerData.drawerData[index],
           );
