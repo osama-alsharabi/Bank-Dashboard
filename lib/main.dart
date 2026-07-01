@@ -1,4 +1,5 @@
 import 'package:bank_dashboard/core/theme/light_theme.dart';
+import 'package:bank_dashboard/feature/overview/view/overview_view.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -10,6 +11,10 @@ class BankDashboard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(debugShowCheckedModeBanner: false, theme: light());
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      theme: light(),
+      home: const OverviewView(),
+    );
   }
 }
