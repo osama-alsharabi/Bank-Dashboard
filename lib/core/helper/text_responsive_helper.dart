@@ -1,3 +1,4 @@
+import 'package:bank_dashboard/core/utils/app_const.dart';
 import 'package:flutter/material.dart';
 
 abstract class TextResponsiveHelper {
@@ -12,9 +13,9 @@ abstract class TextResponsiveHelper {
 
   static double _getScaleFactor({required BuildContext context}) {
     double width = MediaQuery.sizeOf(context).width;
-    if (width < 375) {
+    if (width < AppConst.mobileLayout) {
       return width / 400;
-    } else if (width < 1042) {
+    } else if (width < AppConst.tabletLayout) {
       return width / 700;
     } else {
       return width / 1000;

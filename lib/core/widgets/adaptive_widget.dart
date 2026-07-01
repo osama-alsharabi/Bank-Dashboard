@@ -1,3 +1,4 @@
+import 'package:bank_dashboard/core/utils/app_const.dart';
 import 'package:flutter/material.dart';
 
 class AdaptiveWidget extends StatelessWidget {
@@ -15,9 +16,9 @@ class AdaptiveWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return LayoutBuilder(
       builder: (context, constraints) {
-        if (constraints.maxWidth <= 375) {
+        if (constraints.maxWidth <= AppConst.mobileLayout) {
           return mobileLayout(context);
-        } else if (constraints.maxWidth <= 1024) {
+        } else if (constraints.maxWidth <= AppConst.tabletLayout) {
           return tabletLayout(context);
         } else {
           return desktopLayout(context);
