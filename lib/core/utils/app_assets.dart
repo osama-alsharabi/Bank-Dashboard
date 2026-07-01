@@ -20,6 +20,6 @@ class AppAssets {
 
   static const String iconsTransactions = "assets/icons/transactions.svg";
 
-  static const String imagesLogo = "assets/images/logo.svg";
+  static const String imagesLogo = "assets/images/logo.png";
 }
 
