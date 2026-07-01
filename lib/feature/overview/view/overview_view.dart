@@ -1,3 +1,4 @@
+import 'package:bank_dashboard/feature/overview/view/widgets/overview_body.dart';
 import 'package:flutter/material.dart';
 
 class OverviewView extends StatelessWidget {
@@ -5,6 +6,6 @@ class OverviewView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold();
+    return const Scaffold(body: OverViewBody());
   }
 }
