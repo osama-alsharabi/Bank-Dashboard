@@ -11,6 +11,13 @@ class AppTextStyle {
       context: context,
     ),
   );
+  TextStyle get textStyleMedium18 => TextStyle(
+    fontWeight: FontWeight.w500,
+    fontSize: TextResponsiveHelper.responsiveText(
+      fontSize: 18,
+      context: context,
+    ),
+  );
 }
 
 extension AppTextStyleExtension on BuildContext {
