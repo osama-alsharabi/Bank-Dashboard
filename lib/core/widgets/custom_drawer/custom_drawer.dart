@@ -8,6 +8,7 @@ class CustomDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Drawer(
+      shape: BeveledRectangleBorder(),
       child: Column(children: [CustomDrawerHeader(), CustomDrawerListView()]),
     );
   }
