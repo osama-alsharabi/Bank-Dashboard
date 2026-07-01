@@ -5,6 +5,7 @@ abstract class AppColor {
   static const Color secondaryColor = Color(0xff343C6A);
   static const Color scaffoldBackgroundColor = Color(0xffF5F7FA);
   static const Color customGreyColor = Color(0xffC5C5CF);
+  static const Color customSecondaryGreyColor = Color(0xff718EBF);
   static const Color successColor = Color(0xff41D4A8);
   static const Color failureColor = Color(0xffFF4B4A);
 }

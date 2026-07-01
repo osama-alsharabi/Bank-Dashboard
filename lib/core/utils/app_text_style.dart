@@ -18,6 +18,20 @@ class AppTextStyle {
       context: context,
     ),
   );
+  TextStyle get textStyleRegular15 => TextStyle(
+    fontWeight: FontWeight.w400,
+    fontSize: TextResponsiveHelper.responsiveText(
+      fontSize: 15,
+      context: context,
+    ),
+  );
+  TextStyle get textStyleSemibold25 => TextStyle(
+    fontWeight: FontWeight.w600,
+    fontSize: TextResponsiveHelper.responsiveText(
+      fontSize: 25,
+      context: context,
+    ),
+  );
 }
 
 extension AppTextStyleExtension on BuildContext {

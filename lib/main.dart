@@ -1,5 +1,5 @@
 import 'package:bank_dashboard/core/theme/light_theme.dart';
-import 'package:bank_dashboard/feature/overview/view/overview_view.dart';
+import 'package:bank_dashboard/feature/home/view/home_view.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -14,7 +14,7 @@ class BankDashboard extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: light(),
-      home: const OverviewView(),
+      home: const HomeView(),
     );
   }
 }

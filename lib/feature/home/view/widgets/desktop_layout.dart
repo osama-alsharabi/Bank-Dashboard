@@ -1,4 +1,5 @@
 import 'package:bank_dashboard/core/widgets/custom_drawer/custom_drawer.dart';
+import 'package:bank_dashboard/feature/overview/view/overview_view.dart';
 import 'package:flutter/material.dart';
 
 class DesktopLayout extends StatelessWidget {
@@ -6,6 +7,11 @@ class DesktopLayout extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Row(children: [CustomDrawer()]);
+    return const Row(
+      children: [
+        CustomDrawer(),
+        Expanded(child: OverviewView()),
+      ],
+    );
   }
 }
