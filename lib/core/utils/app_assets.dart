@@ -8,15 +8,21 @@ class AppAssets {
 
   static const String iconsCreditCard = "assets/icons/credit_card.svg";
 
+  static const String iconsDeposit = "assets/icons/deposit.svg";
+
   static const String iconsHome = "assets/icons/home.svg";
 
   static const String iconsInvestments = "assets/icons/investments.svg";
 
   static const String iconsLoans = "assets/icons/loans.svg";
 
+  static const String iconsMoney = "assets/icons/money.svg";
+
   static const String iconsMyPrivileges = "assets/icons/my_privileges.svg";
 
   static const String iconsNotification = "assets/icons/notification.svg";
+
+  static const String iconsPaypalPaymentPay = "assets/icons/paypal_payment_pay.svg";
 
   static const String iconsSearch = "assets/icons/search.svg";
 
