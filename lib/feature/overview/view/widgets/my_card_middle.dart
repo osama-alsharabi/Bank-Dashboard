@@ -2,7 +2,8 @@ import 'package:bank_dashboard/core/utils/app_text_style.dart';
 import 'package:flutter/material.dart';
 
 class MyCardMiddle extends StatelessWidget {
-  const MyCardMiddle({super.key});
+  final bool isSelected;
+  const MyCardMiddle({super.key, required this.isSelected});
 
   @override
   Widget build(BuildContext context) {
@@ -17,14 +18,14 @@ class MyCardMiddle extends StatelessWidget {
               child: Text(
                 "CARD HOLDER",
                 style: context.textStyle.textStyleRegular10.copyWith(
-                  color: Colors.white,
+                  color: isSelected ? Colors.white : null,
                 ),
               ),
             ),
             Text(
               "Osama Alsharabi",
               style: context.textStyle.textStyleRegular10.copyWith(
-                color: Colors.white,
+                color: isSelected ? Colors.white : null,
               ),
             ),
           ],

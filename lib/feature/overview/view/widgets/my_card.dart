@@ -5,30 +5,31 @@ import 'package:bank_dashboard/feature/overview/view/widgets/my_card_middle.dart
 import 'package:flutter/material.dart';
 
 class MyCard extends StatelessWidget {
-  const MyCard({super.key});
+  final bool isSelected;
+  const MyCard({super.key, required this.isSelected});
 
   @override
   Widget build(BuildContext context) {
     return AspectRatio(
-      aspectRatio: 231 / 170,
+      aspectRatio: 231 / 140,
       child: Container(
         decoration: BoxDecoration(
-          color: AppColor.primaryColor,
+          color: isSelected ? AppColor.primaryColor : Colors.white,
           borderRadius: BorderRadius.circular(20),
         ),
-        child: const Column(
+        child: Column(
           children: [
             Padding(
-              padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 20),
-              child: MyCardHeader(),
+              padding: const EdgeInsets.only(right: 20.0, left: 20, top: 20),
+              child: MyCardHeader(isSelected: isSelected),
             ),
-            SizedBox(height: 23),
+            const SizedBox(height: 23),
             Padding(
-              padding: EdgeInsets.symmetric(horizontal: 20.0),
-              child: MyCardMiddle(),
+              padding: const EdgeInsets.symmetric(horizontal: 20.0),
+              child: MyCardMiddle(isSelected: isSelected),
             ),
-            SizedBox(height: 16),
-            MyCardBottom(),
+            const SizedBox(height: 16),
+            MyCardBottom(isSelected: isSelected),
           ],
         ),
       ),

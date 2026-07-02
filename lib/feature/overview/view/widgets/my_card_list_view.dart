@@ -37,7 +37,7 @@ class MyCardListView extends StatelessWidget {
                 padding: EdgeInsets.symmetric(
                   horizontal: index == 0 ? 0 : 25.0,
                 ),
-                child: const MyCard(),
+                child: MyCard(isSelected: index == 0),
               );
             },
           ),

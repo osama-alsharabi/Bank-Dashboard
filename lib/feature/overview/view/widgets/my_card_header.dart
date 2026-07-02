@@ -3,7 +3,8 @@ import 'package:bank_dashboard/core/utils/app_text_style.dart';
 import 'package:flutter/material.dart';
 
 class MyCardHeader extends StatelessWidget {
-  const MyCardHeader({super.key});
+  final bool isSelected;
+  const MyCardHeader({super.key, required this.isSelected});
 
   @override
   Widget build(BuildContext context) {
@@ -16,19 +17,24 @@ class MyCardHeader extends StatelessWidget {
             Text(
               "Balance",
               style: context.textStyle.textStyleRegular11.copyWith(
-                color: Colors.white,
+                color: isSelected ? Colors.white : null,
               ),
             ),
             Text(
               "\$5,756",
               style: context.textStyle.textStyleSemibold16.copyWith(
-                color: Colors.white,
+                color: isSelected ? Colors.white : null,
               ),
             ),
           ],
         ),
 
-        Image.asset(AppAssets.iconsChipCard, height: 29, width: 29),
+        Image.asset(
+          AppAssets.iconsChipCard,
+          height: 29,
+          width: 29,
+          color: isSelected ? Colors.white : Colors.black,
+        ),
       ],
     );
   }

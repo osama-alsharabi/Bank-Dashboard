@@ -1,10 +1,12 @@
 import 'package:bank_dashboard/core/utils/app_assets.dart';
+import 'package:bank_dashboard/core/utils/app_color.dart';
 import 'package:bank_dashboard/core/utils/app_text_style.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 class MyCardBottom extends StatelessWidget {
-  const MyCardBottom({super.key});
+  final bool isSelected;
+  const MyCardBottom({super.key, required this.isSelected});
 
   @override
   Widget build(BuildContext context) {
@@ -31,10 +33,16 @@ class MyCardBottom extends StatelessWidget {
                 Text(
                   '2065********4354',
                   style: context.textStyle.textStyleRegular15.copyWith(
-                    color: Colors.white,
+                    color: isSelected ? Colors.white : null,
                   ),
                 ),
-                SvgPicture.asset(AppAssets.iconsVisaIcon),
+                SvgPicture.asset(
+                  AppAssets.iconsVisaIcon,
+                  colorFilter: const ColorFilter.mode(
+                    AppColor.customGreyColor,
+                    BlendMode.srcIn,
+                  ),
+                ),
               ],
             ),
           ),
