@@ -6,6 +6,7 @@ class RecentTransactionModel {
   final String icon;
   final Color color;
   final bool isDeposit;
+  final double price;
 
   RecentTransactionModel({
     required this.color,
@@ -13,5 +14,6 @@ class RecentTransactionModel {
     required this.date,
     required this.icon,
     required this.isDeposit,
+    required this.price
   });
 }

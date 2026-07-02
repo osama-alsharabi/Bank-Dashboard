@@ -1,3 +1,4 @@
+import 'package:bank_dashboard/core/data/recent_transaction_data.dart';
 import 'package:bank_dashboard/feature/overview/view/widgets/recent_transaction_item.dart';
 import 'package:flutter/material.dart';
 
@@ -13,10 +14,13 @@ class RecentTransactionListView extends StatelessWidget {
         borderRadius: BorderRadius.circular(20),
       ),
       child: ListView.builder(
+        itemCount: RecentTransactionData.data.length,
         itemBuilder: (context, index) {
-          return const Padding(
-            padding: EdgeInsets.symmetric(vertical: 18.0, horizontal: 15),
-            child: RecentTransactionItem(),
+          return Padding(
+            padding: const EdgeInsets.symmetric(vertical: 18.0, horizontal: 15),
+            child: RecentTransactionItem(
+              recentTransactionModel: RecentTransactionData.data[index],
+            ),
           );
         },
       ),
