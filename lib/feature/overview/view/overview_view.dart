@@ -14,7 +14,13 @@ class OverviewView extends StatelessWidget {
         CustomAppBar(title: "Overview"),
         Padding(
           padding: EdgeInsets.all(16),
-          child: Row(children: [MyCardSection(), RecentTransactionSection()]),
+          child: Row(
+            children: [
+              MyCardSection(),
+              SizedBox(width: 25),
+              RecentTransactionSection(),
+            ],
+          ),
         ),
       ],
     );

@@ -1,3 +1,4 @@
+import 'package:bank_dashboard/core/utils/app_text_style.dart';
 import 'package:flutter/material.dart';
 
 class RecentTransactionSection extends StatelessWidget {
@@ -5,6 +6,16 @@ class RecentTransactionSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Expanded(child: Column());
+    return Expanded(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            "Recent Transaction ",
+            style: context.textStyle.textStyleMedium18,
+          ),
+        ],
+      ),
+    );
   }
 }
