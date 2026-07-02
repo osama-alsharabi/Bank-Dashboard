@@ -30,13 +30,10 @@ class MyCardListView extends StatelessWidget {
         const SizedBox(height: 16),
         Expanded(
           child: ListView.builder(
-            itemCount: 2,
             scrollDirection: Axis.horizontal,
             itemBuilder: (context, index) {
               return Padding(
-                padding: EdgeInsets.symmetric(
-                  horizontal: index == 0 ? 0 : 25.0,
-                ),
+                padding: EdgeInsets.only(left: index == 0 ? 0 : 25.0),
                 child: MyCard(isSelected: index == 0),
               );
             },

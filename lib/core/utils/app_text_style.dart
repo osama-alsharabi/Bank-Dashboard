@@ -18,6 +18,13 @@ class AppTextStyle {
       context: context,
     ),
   );
+  TextStyle get textStyleMedium13 => TextStyle(
+    fontWeight: FontWeight.w500,
+    fontSize: TextResponsiveHelper.responsiveText(
+      fontSize: 13,
+      context: context,
+    ),
+  );
   TextStyle get textStyleRegular15 => TextStyle(
     fontWeight: FontWeight.w400,
     fontSize: TextResponsiveHelper.responsiveText(

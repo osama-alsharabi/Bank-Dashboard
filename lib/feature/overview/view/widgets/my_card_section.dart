@@ -6,8 +6,6 @@ class MyCardSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Expanded(
-      child: SizedBox(height: 240, child: MyCardListView()),
-    );
+    return const SizedBox(height: 240, child: MyCardListView());
   }
 }

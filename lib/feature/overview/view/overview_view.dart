@@ -16,9 +16,9 @@ class OverviewView extends StatelessWidget {
           padding: EdgeInsets.all(16),
           child: Row(
             children: [
-              MyCardSection(),
+              Expanded(flex: 2, child: MyCardSection()),
               SizedBox(width: 25),
-              RecentTransactionSection(),
+              Expanded(child: RecentTransactionSection()),
             ],
           ),
         ),
