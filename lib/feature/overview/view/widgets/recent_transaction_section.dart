@@ -13,13 +13,18 @@ class RecentTransactionSection extends StatelessWidget {
         Text("Recent Transaction ", style: context.textStyle.textStyleMedium18),
         const SizedBox(height: 16),
         Container(
+          height: 200,
           decoration: BoxDecoration(
             color: Colors.white,
             borderRadius: BorderRadius.circular(20),
           ),
-          child: const Padding(
-            padding: EdgeInsets.symmetric(vertical: 18.0, horizontal: 15),
-            child: RecentTransactionItem(),
+          child: ListView.builder(
+            itemBuilder: (context, index) {
+              return const Padding(
+                padding: EdgeInsets.symmetric(vertical: 18.0, horizontal: 15),
+                child: RecentTransactionItem(),
+              );
+            },
           ),
         ),
       ],
