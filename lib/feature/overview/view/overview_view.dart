@@ -9,32 +9,40 @@ class OverviewView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Column(
-      crossAxisAlignment: CrossAxisAlignment.stretch,
-      children: [
-        CustomAppBar(title: "Overview"),
-        Column(
-          children: [
-            Padding(
-              padding: EdgeInsets.all(16),
-              child: Row(
-                children: [
-                  Expanded(flex: 2, child: MyCardSection()),
-                  SizedBox(width: 25),
-                  Expanded(child: RecentTransactionSection()),
-                ],
+    return const CustomScrollView(
+      slivers: [
+        SliverAppBar(
+          pinned: true,
+          floating: false,
+          expandedHeight: 80,
+          collapsedHeight: 80,
+          toolbarHeight: 80,
+          flexibleSpace: CustomAppBar(title: "Overview"),
+        ),
+        SliverToBoxAdapter(
+          child: Column(
+            children: [
+              Padding(
+                padding: EdgeInsets.all(16),
+                child: Row(
+                  children: [
+                    Expanded(flex: 2, child: MyCardSection()),
+                    SizedBox(width: 25),
+                    Expanded(child: RecentTransactionSection()),
+                  ],
+                ),
               ),
-            ),
-            Padding(
-              padding: EdgeInsetsGeometry.all(16),
-              child: Row(
-                children: [
-                  Expanded(flex: 2, child: WeeklyActivitySection()),
-                  Expanded(flex: 1, child: SizedBox()),
-                ],
+              Padding(
+                padding: EdgeInsetsGeometry.all(16),
+                child: Row(
+                  children: [
+                    Expanded(flex: 2, child: WeeklyActivitySection()),
+                    Expanded(flex: 1, child: SizedBox()),
+                  ],
+                ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ],
     );
