@@ -38,6 +38,7 @@ class OverviewView extends StatelessWidget {
                 child: Row(
                   children: [
                     Expanded(flex: 2, child: WeeklyActivitySection()),
+                    SizedBox(width: 25),
                     Expanded(flex: 1, child: ExpenseStatisticsSection()),
                   ],
                 ),
