@@ -1,4 +1,5 @@
 import 'package:bank_dashboard/core/widgets/custom_app_bar.dart';
+import 'package:bank_dashboard/feature/overview/view/widgets/expense_statistics_section.dart';
 import 'package:bank_dashboard/feature/overview/view/widgets/my_card_section.dart';
 import 'package:bank_dashboard/feature/overview/view/widgets/recent_transaction_section.dart';
 import 'package:bank_dashboard/feature/overview/view/widgets/weekly_activity_section.dart';
@@ -37,7 +38,7 @@ class OverviewView extends StatelessWidget {
                 child: Row(
                   children: [
                     Expanded(flex: 2, child: WeeklyActivitySection()),
-                    Expanded(flex: 1, child: SizedBox()),
+                    Expanded(flex: 1, child: ExpenseStatisticsSection()),
                   ],
                 ),
               ),
