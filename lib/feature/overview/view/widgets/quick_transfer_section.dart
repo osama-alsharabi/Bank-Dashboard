@@ -1,5 +1,6 @@
 import 'package:bank_dashboard/core/utils/app_color.dart';
 import 'package:bank_dashboard/core/utils/app_text_style.dart';
+import 'package:bank_dashboard/feature/overview/view/widgets/quick_transfer_container.dart';
 import 'package:flutter/material.dart';
 
 class QuickTransferSection extends StatelessWidget {
@@ -16,6 +17,8 @@ class QuickTransferSection extends StatelessWidget {
             color: AppColor.secondaryColor,
           ),
         ),
+        const SizedBox(height: 16),
+        const QuickTransferContainer(),
       ],
     );
   }

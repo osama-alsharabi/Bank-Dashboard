@@ -50,7 +50,7 @@ class OverviewView extends StatelessWidget {
                   children: [
                     Expanded(flex: 1, child: QuickTransferSection()),
                     SizedBox(width: 25),
-                    Expanded(flex: 3, child: SizedBox()),
+                    Expanded(flex: 2, child: SizedBox()),
                   ],
                 ),
               ),
