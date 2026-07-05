@@ -1,3 +1,4 @@
+import 'package:bank_dashboard/feature/overview/view/widgets/quick_tranfer_bottom_section.dart';
 import 'package:bank_dashboard/feature/overview/view/widgets/quick_transfer_arrow_list_users.dart';
 import 'package:bank_dashboard/feature/overview/view/widgets/quick_transfer_list_users.dart';
 import 'package:flutter/material.dart';
@@ -17,6 +18,9 @@ class QuickTransferContentContainer extends StatelessWidget {
             QuickTransferArrowListUsers(),
           ],
         ),
+        SizedBox(height: 30),
+        QuickTransferBottomSection(),
+        SizedBox(height: 35),
       ],
     );
   }
