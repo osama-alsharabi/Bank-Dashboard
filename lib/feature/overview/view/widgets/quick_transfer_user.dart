@@ -8,17 +8,28 @@ class QuickTransferUser extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Image.asset(AppAssets.imagesUserProfile),
-        Text("Livia Bator", style: context.textStyle.textStyleSemibold16),
-        Text(
-          "CEO",
-          style: context.textStyle.textStyleMedium13.copyWith(
-            color: AppColor.customGreyColor,
+    return SizedBox(
+      width: 70,
+      child: Column(
+        children: [
+          Image.asset(AppAssets.imagesUserProfile),
+          const SizedBox(height: 15),
+          Text(
+            "Livia Bator",
+            overflow: TextOverflow.ellipsis,
+            maxLines: 1,
+            style: context.textStyle.textStyleSemibold16.copyWith(
+              fontWeight: FontWeight.w400,
+            ),
           ),
-        ),
-      ],
+          Text(
+            "CEO",
+            style: context.textStyle.textStyleMedium13.copyWith(
+              color: AppColor.customGreyColor,
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
