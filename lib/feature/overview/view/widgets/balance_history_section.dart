@@ -1,5 +1,6 @@
 import 'package:bank_dashboard/core/utils/app_color.dart';
 import 'package:bank_dashboard/core/utils/app_text_style.dart';
+import 'package:bank_dashboard/feature/overview/view/widgets/balance_history_chart.dart';
 import 'package:flutter/material.dart';
 
 class BalanceHistorySection extends StatelessWidget {
@@ -15,6 +16,7 @@ class BalanceHistorySection extends StatelessWidget {
             color: AppColor.secondaryColor,
           ),
         ),
+        const BalanceHistoryChart(),
       ],
     );
   }
