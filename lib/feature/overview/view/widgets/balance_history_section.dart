@@ -9,6 +9,7 @@ class BalanceHistorySection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
           "Balance History",
@@ -16,6 +17,7 @@ class BalanceHistorySection extends StatelessWidget {
             color: AppColor.secondaryColor,
           ),
         ),
+        const SizedBox(height: 16),
         const BalanceHistoryChart(),
       ],
     );
