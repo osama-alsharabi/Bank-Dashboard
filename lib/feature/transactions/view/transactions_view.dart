@@ -1,6 +1,7 @@
 import 'package:bank_dashboard/core/widgets/custom_app_bar.dart';
 import 'package:bank_dashboard/feature/overview/view/widgets/my_card_section.dart';
 import 'package:bank_dashboard/feature/transactions/view/widgets/my_expense_section.dart';
+import 'package:bank_dashboard/feature/transactions/view/widgets/recent_transactions_section.dart';
 import 'package:flutter/material.dart';
 
 class TransactionsView extends StatelessWidget {
@@ -30,6 +31,11 @@ class TransactionsView extends StatelessWidget {
                     Expanded(child: MyExpenseSection()),
                   ],
                 ),
+              ),
+              SizedBox(height: 24),
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 16, vertical: 0),
+                child: RecentTransactionsSection(),
               ),
             ],
           ),
