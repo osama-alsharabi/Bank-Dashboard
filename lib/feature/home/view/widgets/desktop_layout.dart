@@ -2,6 +2,7 @@ import 'package:bank_dashboard/core/cubit/change_ui_by_drawer/change_ui_by_drawe
 import 'package:bank_dashboard/core/interface/sealed_ui_type.dart';
 import 'package:bank_dashboard/core/widgets/custom_drawer/custom_drawer.dart';
 import 'package:bank_dashboard/feature/overview/view/overview_view.dart';
+import 'package:bank_dashboard/feature/transactions/view/transactions_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -25,9 +26,8 @@ class BodyBlocBuilder extends StatelessWidget {
           switch (state.uiType) {
             case Overview():
               return const Expanded(child: OverviewView());
-
             case Transactions():
-              return const SizedBox();
+              return const Expanded(child: TransactionsView());
             case Accounts():
               return const SizedBox();
             case Investments():
