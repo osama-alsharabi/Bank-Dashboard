@@ -1,4 +1,5 @@
 import 'package:bank_dashboard/core/widgets/custom_app_bar.dart';
+import 'package:bank_dashboard/feature/overview/view/widgets/my_card_section.dart';
 import 'package:flutter/material.dart';
 
 class TransactionsView extends StatelessWidget {
@@ -15,6 +16,22 @@ class TransactionsView extends StatelessWidget {
           collapsedHeight: 80,
           toolbarHeight: 80,
           flexibleSpace: CustomAppBar(title: "Transactions"),
+        ),
+        SliverToBoxAdapter(
+          child: Column(
+            children: [
+              Padding(
+                padding: EdgeInsets.all(16),
+                child: Row(
+                  children: [
+                    Expanded(flex: 2, child: MyCardSection()),
+                    SizedBox(width: 25),
+                    Expanded(child: SizedBox()),
+                  ],
+                ),
+              ),
+            ],
+          ),
         ),
       ],
     );
