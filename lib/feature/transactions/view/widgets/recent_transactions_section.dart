@@ -1,5 +1,6 @@
 import 'package:bank_dashboard/core/utils/app_color.dart';
 import 'package:bank_dashboard/core/utils/app_text_style.dart';
+import 'package:bank_dashboard/feature/transactions/view/widgets/recent_transactions_tab_bar.dart';
 import 'package:flutter/material.dart';
 
 class RecentTransactionsSection extends StatelessWidget {
@@ -16,6 +17,8 @@ class RecentTransactionsSection extends StatelessWidget {
             color: AppColor.secondaryColor,
           ),
         ),
+        const SizedBox(height: 16),
+        const RecentTransactionsTabBar(),
       ],
     );
   }
