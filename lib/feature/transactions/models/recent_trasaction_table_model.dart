@@ -7,13 +7,13 @@ class RecentTrasactionTableModel {
   final double amount;
   final bool isIncome;
 
-  RecentTrasactionTableModel({
+  const RecentTrasactionTableModel({
     required this.description,
     required this.transactionID,
     required this.type,
     required this.card,
     required this.date,
     required this.amount,
-    required this.isIncome
+    required this.isIncome,
   });
 }
