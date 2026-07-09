@@ -3,7 +3,7 @@ import 'package:bank_dashboard/core/utils/app_text_style.dart';
 import 'package:bank_dashboard/feature/transactions/models/recent_trasaction_table_model.dart';
 import 'package:flutter/material.dart';
 
-TableRow tableRowUiData({
+TableRow generateTableRowUiData({
   required BuildContext context,
   required RecentTrasactionTableModel data,
 }) {
@@ -33,7 +33,7 @@ TableRow tableRowUiData({
                 child: Text(
                   data.description,
                   overflow: TextOverflow.ellipsis,
-                  style: context.textStyle.textStyleSemibold16,
+                  style: context.textStyle.textStyleRegular16,
                 ),
               ),
             ],
@@ -45,34 +45,34 @@ TableRow tableRowUiData({
         child: Center(
           child: Text(
             data.transactionID,
-            style: context.textStyle.textStyleSemibold16,
+            style: context.textStyle.textStyleRegular16,
           ),
         ),
       ),
       Padding(
         padding: const EdgeInsetsGeometry.symmetric(vertical: 12),
         child: Center(
-          child: Text(data.type, style: context.textStyle.textStyleSemibold16),
+          child: Text(data.type, style: context.textStyle.textStyleRegular16),
         ),
       ),
       Padding(
         padding: const EdgeInsetsGeometry.symmetric(vertical: 12),
         child: Center(
-          child: Text(data.card, style: context.textStyle.textStyleSemibold16),
+          child: Text(data.card, style: context.textStyle.textStyleRegular16),
         ),
       ),
       Padding(
         padding: const EdgeInsetsGeometry.symmetric(vertical: 12),
         child: Center(
-          child: Text(data.date, style: context.textStyle.textStyleSemibold16),
+          child: Text(data.date, style: context.textStyle.textStyleRegular16),
         ),
       ),
       Padding(
         padding: const EdgeInsetsGeometry.symmetric(vertical: 12),
         child: Center(
           child: Text(
-            data.isIncome ? "${data.amount}" : "-${data.amount}",
-            style: context.textStyle.textStyleSemibold16.copyWith(
+            data.isIncome ? "+\$${data.amount}" : "-\$${data.amount}",
+            style: context.textStyle.textStyleRegular16.copyWith(
               color: data.isIncome
                   ? AppColor.successColor
                   : AppColor.failureColor,
@@ -83,12 +83,17 @@ TableRow tableRowUiData({
       Padding(
         padding: const EdgeInsetsGeometry.symmetric(vertical: 12),
         child: Container(
-          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+          padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(50),
             border: Border.all(color: const Color(0xff123288)),
           ),
-          child: const Center(child: Text("Download")),
+          child: Center(
+            child: Text(
+              "Download",
+              style: context.textStyle.textStyleRegular16,
+            ),
+          ),
         ),
       ),
     ],

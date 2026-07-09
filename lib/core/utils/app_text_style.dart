@@ -53,6 +53,14 @@ class AppTextStyle {
       context: context,
     ),
   );
+
+  TextStyle get textStyleRegular16 => TextStyle(
+    fontWeight: FontWeight.w400,
+    fontSize: TextResponsiveHelper.responsiveText(
+      fontSize: 16,
+      context: context,
+    ),
+  );
   TextStyle get textStyleSemibold25 => TextStyle(
     fontWeight: FontWeight.w600,
     fontSize: TextResponsiveHelper.responsiveText(
