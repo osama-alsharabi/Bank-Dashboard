@@ -3,7 +3,7 @@ class RecentTrasactionTableModel {
   final String transactionID;
   final String type;
   final String card;
-  final DateTime date;
+  final String date;
   final double amount;
   final bool isIncome;
 
