@@ -20,6 +20,7 @@ class RecentTransactionsSection extends StatelessWidget {
         ),
         const SizedBox(height: 16),
         const RecentTransactionsTabBar(),
+        const SizedBox(height: 25),
         const RecentTransactionsContainer(),
       ],
     );
