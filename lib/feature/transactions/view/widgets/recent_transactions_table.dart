@@ -1,4 +1,5 @@
 import 'package:bank_dashboard/core/utils/app_text_style.dart';
+import 'package:bank_dashboard/feature/transactions/data/recent_trasaction_table_data.dart';
 import 'package:bank_dashboard/feature/transactions/view/widgets/table_row_ui_data.dart';
 import 'package:flutter/material.dart';
 
@@ -24,7 +25,7 @@ class _RecentTransactionsTableState extends State<RecentTransactionsTable> {
   Widget build(BuildContext context) {
     return Table(
       border: const TableBorder(
-        horizontalInside: BorderSide(width: 1, color: Color(0xff718EBF)),
+        horizontalInside: BorderSide(width: 0.2, color: Color(0xff718EBF)),
       ),
       children: [
         TableRow(
@@ -42,7 +43,9 @@ class _RecentTransactionsTableState extends State<RecentTransactionsTable> {
               )
               .toList(),
         ),
-        tableRowUiData(context),
+        ...RecentTrasactionTableData.data.map(
+          (e) => tableRowUiData(context: context, data: e),
+        ),
       ],
     );
   }
