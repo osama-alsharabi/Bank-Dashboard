@@ -1,4 +1,5 @@
 import 'package:bank_dashboard/core/utils/app_text_style.dart';
+import 'package:bank_dashboard/feature/transactions/view/widgets/table_row_ui_data.dart';
 import 'package:flutter/material.dart';
 
 class RecentTransactionsTable extends StatefulWidget {
@@ -30,7 +31,7 @@ class _RecentTransactionsTableState extends State<RecentTransactionsTable> {
           children: tableTitle
               .map(
                 (e) => Padding(
-                  padding: const EdgeInsetsGeometry.symmetric(vertical: 10),
+                  padding: const EdgeInsetsGeometry.symmetric(vertical: 12),
                   child: Text(
                     e,
                     style: context.textStyle.textStyleSemibold16.copyWith(
@@ -41,6 +42,7 @@ class _RecentTransactionsTableState extends State<RecentTransactionsTable> {
               )
               .toList(),
         ),
+        tableRowUiData(context),
       ],
     );
   }
