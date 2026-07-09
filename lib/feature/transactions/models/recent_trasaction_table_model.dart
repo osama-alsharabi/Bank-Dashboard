@@ -5,6 +5,7 @@ class RecentTrasactionTableModel {
   final String card;
   final DateTime date;
   final double amount;
+  final bool isIncome;
 
   RecentTrasactionTableModel({
     required this.description,
@@ -13,5 +14,6 @@ class RecentTrasactionTableModel {
     required this.card,
     required this.date,
     required this.amount,
+    required this.isIncome
   });
 }
