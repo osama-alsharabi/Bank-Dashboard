@@ -1,3 +1,4 @@
+import 'package:bank_dashboard/feature/accounts/data/accounts_header_data.dart';
 import 'package:bank_dashboard/feature/accounts/view/widgets/account_header_item.dart';
 import 'package:flutter/material.dart';
 
@@ -6,6 +7,22 @@ class AccountsHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const AccountHeaderItem();
+    return Row(
+      children: AccountsHeaderData.data
+          .asMap()
+          .entries
+          .map(
+            (e) => const Expanded(
+              child: FittedBox(
+                fit: BoxFit.scaleDown,
+                child: Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 30),
+                  child: AccountHeaderItem(),
+                ),
+              ),
+            ),
+          )
+          .toList(),
+    );
   }
 }
