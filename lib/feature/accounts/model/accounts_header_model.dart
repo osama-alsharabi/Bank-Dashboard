@@ -3,7 +3,7 @@ class AccountsHeaderModel {
   final String icon;
   final double amount;
 
-  AccountsHeaderModel({
+  const AccountsHeaderModel({
     required this.title,
     required this.icon,
     required this.amount,
