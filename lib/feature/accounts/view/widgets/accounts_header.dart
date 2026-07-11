@@ -12,12 +12,12 @@ class AccountsHeader extends StatelessWidget {
           .asMap()
           .entries
           .map(
-            (e) => const Expanded(
+            (e) => Expanded(
               child: FittedBox(
                 fit: BoxFit.scaleDown,
                 child: Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 30),
-                  child: AccountHeaderItem(),
+                  padding: const EdgeInsets.symmetric(horizontal: 30),
+                  child: AccountHeaderItem(accountsHeaderModel: e.value),
                 ),
               ),
             ),

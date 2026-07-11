@@ -1,11 +1,12 @@
-import 'package:bank_dashboard/core/utils/app_assets.dart';
 import 'package:bank_dashboard/core/utils/app_color.dart';
 import 'package:bank_dashboard/core/utils/app_text_style.dart';
+import 'package:bank_dashboard/feature/accounts/model/accounts_header_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 class AccountHeaderItem extends StatelessWidget {
-  const AccountHeaderItem({super.key});
+  final AccountsHeaderModel accountsHeaderModel;
+  const AccountHeaderItem({super.key, required this.accountsHeaderModel});
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +26,7 @@ class AccountHeaderItem extends StatelessWidget {
             child: Padding(
               padding: const EdgeInsets.all(20),
               child: SvgPicture.asset(
-                AppAssets.iconsAccounts,
+                accountsHeaderModel.icon,
                 width: 30,
                 height: 30,
               ),
@@ -35,12 +36,15 @@ class AccountHeaderItem extends StatelessWidget {
           Column(
             children: [
               Text(
-                "My Balance",
+                accountsHeaderModel.title,
                 style: context.textStyle.textStyleRegular16.copyWith(
                   color: AppColor.customSecondaryGreyColor,
                 ),
               ),
-              Text("\$12,750", style: context.textStyle.textStyleSemibold25),
+              Text(
+                "\$${accountsHeaderModel.amount}",
+                style: context.textStyle.textStyleSemibold25,
+              ),
             ],
           ),
         ],
