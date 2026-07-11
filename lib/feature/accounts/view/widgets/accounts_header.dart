@@ -9,15 +9,12 @@ class AccountsHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: AccountsHeaderData.data
-          .asMap()
-          .entries
           .map(
             (e) => Expanded(
               child: FittedBox(
-                fit: BoxFit.scaleDown,
                 child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 30),
-                  child: AccountHeaderItem(accountsHeaderModel: e.value),
+                  padding: const EdgeInsets.symmetric(horizontal: 16),
+                  child: AccountHeaderItem(accountsHeaderModel: e),
                 ),
               ),
             ),

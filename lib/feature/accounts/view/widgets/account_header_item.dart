@@ -20,7 +20,7 @@ class AccountHeaderItem extends StatelessWidget {
         children: [
           Container(
             decoration: BoxDecoration(
-              color: Colors.amber.withAlpha(50),
+              color: accountsHeaderModel.color.withAlpha(50),
               shape: BoxShape.circle,
             ),
             child: Padding(
@@ -42,7 +42,7 @@ class AccountHeaderItem extends StatelessWidget {
                 ),
               ),
               Text(
-                "\$${accountsHeaderModel.amount}",
+                "\$${accountsHeaderModel.amount.toStringAsFixed(0)}",
                 style: context.textStyle.textStyleSemibold25,
               ),
             ],

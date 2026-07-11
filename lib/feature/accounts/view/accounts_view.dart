@@ -23,8 +23,8 @@ class AccountsView extends StatelessWidget {
               Padding(
                 padding: EdgeInsetsGeometry.only(
                   top: 30,
-                  right: 40,
-                  left: 40,
+                  right: 16,
+                  left: 16,
                   bottom: 23,
                 ),
                 child: AccountsHeader(),
