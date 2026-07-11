@@ -1,5 +1,6 @@
 import 'package:bank_dashboard/core/utils/app_color.dart';
 import 'package:bank_dashboard/core/utils/app_text_style.dart';
+import 'package:bank_dashboard/feature/transactions/view/widgets/previous_and_next_recent_trasactions.dart';
 import 'package:bank_dashboard/feature/transactions/view/widgets/recent_transactions_container.dart';
 import 'package:bank_dashboard/feature/transactions/view/widgets/recent_transactions_tab_bar.dart';
 import 'package:flutter/material.dart';
@@ -22,6 +23,9 @@ class RecentTransactionsSection extends StatelessWidget {
         const RecentTransactionsTabBar(),
         const SizedBox(height: 25),
         const RecentTransactionsContainer(),
+        const SizedBox(height: 30),
+        const PreviousAndNextRecentTrasactions(),
+        const SizedBox(height: 27),
       ],
     );
   }
