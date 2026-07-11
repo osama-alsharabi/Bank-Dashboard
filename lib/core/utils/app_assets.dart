@@ -2,6 +2,14 @@
 class AppAssets {
   AppAssets._();
   
+  static const String iconsAccountExpense = "assets/icons/account_expense.svg";
+
+  static const String iconsAccountIncome = "assets/icons/account_income.svg";
+
+  static const String iconsAccountMyBalance = "assets/icons/account_my_balance.svg";
+
+  static const String iconsAccountTotalSaving = "assets/icons/account_total_saving.svg";
+
   static const String iconsAccounts = "assets/icons/accounts.svg";
 
   static const String iconsChipCard = "assets/icons/chip_card.png";
