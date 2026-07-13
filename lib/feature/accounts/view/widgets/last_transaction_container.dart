@@ -1,3 +1,4 @@
+import 'package:bank_dashboard/feature/accounts/view/widgets/last_transaction_item.dart';
 import 'package:flutter/material.dart';
 
 class LastTransactionContainer extends StatelessWidget {
@@ -6,12 +7,14 @@ class LastTransactionContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      padding: const EdgeInsets.all(25),
       height: 235,
       width: double.infinity,
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(25),
       ),
+      child: const LastTransactionItem(),
     );
   }
 }
