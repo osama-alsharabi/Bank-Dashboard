@@ -33,7 +33,10 @@ class AccountsView extends StatelessWidget {
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 16),
                 child: Row(
-                  children: [Expanded(child: LastTransactionSection())],
+                  children: [
+                    Expanded(flex: 2, child: LastTransactionSection()),
+                    Expanded(child: SizedBox()),
+                  ],
                 ),
               ),
             ],
