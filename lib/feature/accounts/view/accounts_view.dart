@@ -1,5 +1,6 @@
 import 'package:bank_dashboard/core/widgets/custom_app_bar.dart';
 import 'package:bank_dashboard/feature/accounts/view/widgets/accounts_header.dart';
+import 'package:bank_dashboard/feature/accounts/view/widgets/last_transaction_section.dart';
 import 'package:flutter/material.dart';
 
 class AccountsView extends StatelessWidget {
@@ -28,6 +29,12 @@ class AccountsView extends StatelessWidget {
                   bottom: 23,
                 ),
                 child: AccountsHeader(),
+              ),
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 16),
+                child: Row(
+                  children: [Expanded(child: LastTransactionSection())],
+                ),
               ),
             ],
           ),
