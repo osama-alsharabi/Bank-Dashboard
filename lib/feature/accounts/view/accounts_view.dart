@@ -1,4 +1,5 @@
 import 'package:bank_dashboard/core/widgets/custom_app_bar.dart';
+import 'package:bank_dashboard/feature/accounts/view/widgets/account_my_card.dart';
 import 'package:bank_dashboard/feature/accounts/view/widgets/accounts_header.dart';
 import 'package:bank_dashboard/feature/accounts/view/widgets/last_transaction_section.dart';
 import 'package:flutter/material.dart';
@@ -35,7 +36,8 @@ class AccountsView extends StatelessWidget {
                 child: Row(
                   children: [
                     Expanded(flex: 2, child: LastTransactionSection()),
-                    Expanded(child: SizedBox()),
+                    SizedBox(width: 30),
+                    Expanded(child: AccountMyCard()),
                   ],
                 ),
               ),
