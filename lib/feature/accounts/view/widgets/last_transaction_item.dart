@@ -1,11 +1,12 @@
-import 'package:bank_dashboard/core/utils/app_assets.dart';
 import 'package:bank_dashboard/core/utils/app_color.dart';
 import 'package:bank_dashboard/core/utils/app_text_style.dart';
+import 'package:bank_dashboard/feature/accounts/model/last_trasaction_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 class LastTransactionItem extends StatelessWidget {
-  const LastTransactionItem({super.key});
+  final LastTrasactionModel lastTransactionModel;
+  const LastTransactionItem({super.key, required this.lastTransactionModel});
 
   @override
   Widget build(BuildContext context) {
@@ -18,10 +19,10 @@ class LastTransactionItem extends StatelessWidget {
           Container(
             padding: const EdgeInsets.all(15),
             decoration: BoxDecoration(
-              color: Colors.blue,
+              color: lastTransactionModel.color.withAlpha(80),
               borderRadius: BorderRadius.circular(20),
             ),
-            child: SvgPicture.asset(AppAssets.iconsAccountExpense),
+            child: SvgPicture.asset(lastTransactionModel.image),
           ),
           const SizedBox(width: 25),
           Expanded(
@@ -31,10 +32,13 @@ class LastTransactionItem extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text("Expense", style: context.textStyle.textStyleSemibold16),
+                  Text(
+                    lastTransactionModel.title,
+                    style: context.textStyle.textStyleSemibold16,
+                  ),
                   const SizedBox(height: 5),
                   Text(
-                    "Today, 16 Mar 2023",
+                    lastTransactionModel.date,
                     style: context.textStyle.textStyleRegular15.copyWith(
                       color: AppColor.customSecondaryGreyColor,
                     ),
@@ -48,7 +52,7 @@ class LastTransactionItem extends StatelessWidget {
             child: Center(
               child: FittedBox(
                 child: Text(
-                  "type",
+                  lastTransactionModel.type,
                   style: context.textStyle.textStyleRegular15.copyWith(
                     color: AppColor.customSecondaryGreyColor,
                   ),
@@ -61,7 +65,7 @@ class LastTransactionItem extends StatelessWidget {
             child: Center(
               child: FittedBox(
                 child: Text(
-                  "card number",
+                  lastTransactionModel.cardNumber,
                   style: context.textStyle.textStyleRegular15.copyWith(
                     color: AppColor.customSecondaryGreyColor,
                   ),
@@ -74,7 +78,7 @@ class LastTransactionItem extends StatelessWidget {
             child: Center(
               child: FittedBox(
                 child: Text(
-                  "status",
+                  lastTransactionModel.status,
                   style: context.textStyle.textStyleRegular15.copyWith(
                     color: AppColor.customSecondaryGreyColor,
                   ),
@@ -87,9 +91,11 @@ class LastTransactionItem extends StatelessWidget {
             child: Center(
               child: FittedBox(
                 child: Text(
-                  "amount",
+                  lastTransactionModel.amount,
                   style: context.textStyle.textStyleRegular15.copyWith(
-                    color: AppColor.customSecondaryGreyColor,
+                    color: lastTransactionModel.isDisposed
+                        ? AppColor.successColor
+                        : AppColor.failureColor,
                   ),
                 ),
               ),

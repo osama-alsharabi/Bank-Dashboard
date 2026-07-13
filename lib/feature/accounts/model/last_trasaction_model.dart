@@ -11,7 +11,7 @@ class LastTrasactionModel {
   final String amount;
   final bool isDisposed;
 
-  LastTrasactionModel({
+  const LastTrasactionModel({
     required this.image,
     required this.color,
     required this.title,

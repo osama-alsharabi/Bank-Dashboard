@@ -1,3 +1,4 @@
+import 'package:bank_dashboard/feature/accounts/data/last_transaction_data.dart';
 import 'package:bank_dashboard/feature/accounts/view/widgets/last_transaction_item.dart';
 import 'package:flutter/material.dart';
 
@@ -14,7 +15,14 @@ class LastTransactionContainer extends StatelessWidget {
         color: Colors.white,
         borderRadius: BorderRadius.circular(25),
       ),
-      child: const LastTransactionItem(),
+      child: ListView.builder(
+        itemCount: LastTransactionData.data.length,
+        itemBuilder: (context, index) {
+          return LastTransactionItem(
+            lastTransactionModel: LastTransactionData.data[index],
+          );
+        },
+      ),
     );
   }
 }
