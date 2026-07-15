@@ -1,5 +1,6 @@
 import 'package:bank_dashboard/core/utils/app_color.dart';
 import 'package:bank_dashboard/core/utils/app_text_style.dart';
+import 'package:bank_dashboard/feature/accounts/view/widgets/debit_and_credit_overview_chart.dart';
 import 'package:flutter/material.dart';
 
 class DebitAndCreditOverviewSection extends StatelessWidget {
@@ -17,7 +18,7 @@ class DebitAndCreditOverviewSection extends StatelessWidget {
           ),
         ),
         const SizedBox(height: 16),
-        const SizedBox(height: 364, child: Placeholder()),
+        const SizedBox(height: 364, child: DebitAndCreditOverviewChart()),
       ],
     );
   }
