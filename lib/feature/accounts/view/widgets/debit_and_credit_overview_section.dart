@@ -19,6 +19,7 @@ class DebitAndCreditOverviewSection extends StatelessWidget {
         ),
         const SizedBox(height: 16),
         const SizedBox(height: 364, child: DebitAndCreditOverviewChart()),
+        const SizedBox(height: 16),
       ],
     );
   }
