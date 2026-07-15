@@ -7,7 +7,7 @@ class InvoicesSentModel {
   final String time;
   final Color color;
 
-  InvoicesSentModel({
+  const InvoicesSentModel({
     required this.icon,
     required this.title,
     required this.amount,
