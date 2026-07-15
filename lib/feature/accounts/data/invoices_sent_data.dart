@@ -13,7 +13,7 @@ abstract class InvoicesSentData {
       color: Color(0xFFDCFAF8),
     ),
     InvoicesSentModel(
-      icon: AppAssets.imagesUserProfile,
+      icon: AppAssets.iconsEmillyWilsonIcon,
       title: "Michael",
       amount: "\$160",
       time: "2 days ago",
@@ -27,7 +27,7 @@ abstract class InvoicesSentData {
       color: Color(0xFFE7EDFF),
     ),
     InvoicesSentModel(
-      icon: AppAssets.imagesUserProfile,
+      icon: AppAssets.iconsEmillyWilsonIcon,
       title: "William",
       amount: "\$90",
       time: "10 days ago",
