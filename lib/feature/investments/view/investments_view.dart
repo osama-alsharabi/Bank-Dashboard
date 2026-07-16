@@ -21,7 +21,7 @@ class InvestmentsView extends StatelessWidget {
           child: Column(
             children: [
               Padding(
-                padding: EdgeInsets.symmetric(horizontal: 16),
+                padding: EdgeInsets.symmetric(horizontal: 16, vertical: 16),
                 child: InvsetmentsHeader(),
               ),
             ],

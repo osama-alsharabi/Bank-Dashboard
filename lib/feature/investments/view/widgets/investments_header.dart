@@ -9,7 +9,18 @@ class InvsetmentsHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: InvestmentsHeaderData.data
-          .map((e) => const InvestmentsHeaderItem())
+          .asMap()
+          .entries
+          .map(
+            (e) => const Expanded(
+              child: FittedBox(
+                child: Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 6.0),
+                  child: InvestmentsHeaderItem(),
+                ),
+              ),
+            ),
+          )
           .toList(),
     );
   }
