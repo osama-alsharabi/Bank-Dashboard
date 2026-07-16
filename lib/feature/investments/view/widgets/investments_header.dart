@@ -12,11 +12,11 @@ class InvsetmentsHeader extends StatelessWidget {
           .asMap()
           .entries
           .map(
-            (e) => const Expanded(
+            (e) => Expanded(
               child: FittedBox(
                 child: Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 6.0),
-                  child: InvestmentsHeaderItem(),
+                  padding: const EdgeInsets.symmetric(horizontal: 6.0),
+                  child: InvestmentsHeaderItem(investmentsHeaderModel: e.value),
                 ),
               ),
             ),

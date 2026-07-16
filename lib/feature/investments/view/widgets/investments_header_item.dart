@@ -1,11 +1,15 @@
-import 'package:bank_dashboard/core/utils/app_assets.dart';
 import 'package:bank_dashboard/core/utils/app_color.dart';
 import 'package:bank_dashboard/core/utils/app_text_style.dart';
+import 'package:bank_dashboard/feature/investments/model/investments_header_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 class InvestmentsHeaderItem extends StatelessWidget {
-  const InvestmentsHeaderItem({super.key});
+  final InvestmentsHeaderModel investmentsHeaderModel;
+  const InvestmentsHeaderItem({
+    super.key,
+    required this.investmentsHeaderModel,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -18,14 +22,14 @@ class InvestmentsHeaderItem extends StatelessWidget {
       child: Row(
         children: [
           Container(
-            decoration: const BoxDecoration(
-              color: Color(0xff654121),
+            decoration: BoxDecoration(
+              color: investmentsHeaderModel.color.withAlpha(50),
               shape: BoxShape.circle,
             ),
             child: Padding(
               padding: const EdgeInsets.all(20),
               child: SvgPicture.asset(
-                AppAssets.iconsAccountExpense,
+                investmentsHeaderModel.icon,
                 width: 30,
                 height: 30,
               ),
@@ -36,27 +40,19 @@ class InvestmentsHeaderItem extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                "accountsHeaderModel.title",
+                investmentsHeaderModel.title,
                 style: context.textStyle.textStyleRegular16.copyWith(
                   color: AppColor.customSecondaryGreyColor,
                 ),
               ),
-              Text("\$55555", style: context.textStyle.textStyleSemibold25),
+              Text(
+                "\$${investmentsHeaderModel.amount.toStringAsFixed(0)}",
+                style: context.textStyle.textStyleSemibold25,
+              ),
             ],
           ),
         ],
       ),
     );
-  }
-}
-
-class InvsetmentsHeader extends StatelessWidget {
-  const InvsetmentsHeader({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Row(children: [InvestmentsHeaderItem()]);
   }
 }

@@ -17,7 +17,7 @@ abstract class InvestmentsHeaderData {
       color: Color(0xffFFE0EB),
     ),
     InvestmentsHeaderModel(
-      title: "Rate of Return",
+      title: "Rate of Return            ",
       icon: AppAssets.iconsRateOfReturn,
       amount: 580,
       color: Color(0xffE7EDFF),
