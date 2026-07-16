@@ -17,7 +17,16 @@ class InvestmentsView extends StatelessWidget {
           toolbarHeight: 80,
           flexibleSpace: CustomAppBar(title: "Investments"),
         ),
-        SliverToBoxAdapter(child: Column(children: [InvestmentsHeader()])),
+        SliverToBoxAdapter(
+          child: Column(
+            children: [
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 16),
+                child: InvsetmentsHeader(),
+              ),
+            ],
+          ),
+        ),
       ],
     );
   }
