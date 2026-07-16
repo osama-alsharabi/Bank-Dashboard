@@ -1,3 +1,4 @@
+import 'package:bank_dashboard/feature/investments/data/investments_header_data.dart';
 import 'package:bank_dashboard/feature/investments/view/widgets/investments_header_item.dart';
 import 'package:flutter/material.dart';
 
@@ -6,6 +7,10 @@ class InvsetmentsHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Row(children: [InvestmentsHeaderItem()]);
+    return Row(
+      children: InvestmentsHeaderData.data
+          .map((e) => const InvestmentsHeaderItem())
+          .toList(),
+    );
   }
 }
