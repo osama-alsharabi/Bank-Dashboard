@@ -1,9 +1,11 @@
 import 'package:bank_dashboard/core/utils/app_assets.dart';
 import 'package:bank_dashboard/feature/investments/model/my_investment_model.dart';
+import 'package:flutter/widgets.dart';
 
 abstract class MyInvestmentData {
   static const List<MyInvestmentModel> data = [
     MyInvestmentModel(
+      color: Color(0xffFFE0EB),
       name: "Apple Store",
       category: "E-commerce, Marketplace",
       icon: AppAssets.iconsApple,
@@ -12,6 +14,7 @@ abstract class MyInvestmentData {
       isPositive: true,
     ),
     MyInvestmentModel(
+      color: Color(0xffE7EDFF),
       name: "Samsung Mobile",
       category: "E-commerce, Marketplace",
       icon: AppAssets.iconsSamsung,
@@ -20,6 +23,7 @@ abstract class MyInvestmentData {
       isPositive: false,
     ),
     MyInvestmentModel(
+      color: Color(0xffFFF5D9),
       name: "Tesla Motors",
       category: "Electric Vehicles",
       icon: AppAssets.iconsTesla,

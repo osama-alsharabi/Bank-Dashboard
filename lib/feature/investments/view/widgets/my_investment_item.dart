@@ -22,7 +22,7 @@ class MyInvestmentItem extends StatelessWidget {
             padding: const EdgeInsets.all(19),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(20),
-              color: const Color(0xffFFE0EB),
+              color: myInvestmentModel.color,
             ),
             child: SvgPicture.asset(myInvestmentModel.icon),
           ),
