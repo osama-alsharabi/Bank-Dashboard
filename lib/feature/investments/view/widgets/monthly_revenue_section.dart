@@ -1,5 +1,6 @@
 import 'package:bank_dashboard/core/utils/app_color.dart';
 import 'package:bank_dashboard/core/utils/app_text_style.dart';
+import 'package:bank_dashboard/feature/investments/view/widgets/monthly_revenue_chart.dart';
 import 'package:flutter/material.dart';
 
 class MonthlyRevenueSection extends StatelessWidget {
@@ -17,6 +18,7 @@ class MonthlyRevenueSection extends StatelessWidget {
           ),
         ),
         const SizedBox(height: 16),
+        const MonthlyRevenueChart(),
       ],
     );
   }
