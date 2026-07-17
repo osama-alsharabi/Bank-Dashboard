@@ -12,6 +12,8 @@ class AppAssets {
 
   static const String iconsAccounts = "assets/icons/accounts.svg";
 
+  static const String iconsApple = "assets/icons/apple.svg";
+
   static const String iconsChipCard = "assets/icons/chip_card.png";
 
   static const String iconsCreditCard = "assets/icons/credit_card.svg";
@@ -40,6 +42,8 @@ class AppAssets {
 
   static const String iconsRateOfReturn = "assets/icons/rate_of_return.svg";
 
+  static const String iconsSamsung = "assets/icons/samsung.svg";
+
   static const String iconsSearch = "assets/icons/search.svg";
 
   static const String iconsServices = "assets/icons/services.svg";
@@ -47,6 +51,8 @@ class AppAssets {
   static const String iconsSettings = "assets/icons/settings.svg";
 
   static const String iconsSpotifySubscriptionIcon = "assets/icons/spotify_subscription_icon.svg";
+
+  static const String iconsTesla = "assets/icons/tesla.svg";
 
   static const String iconsTotalInvestedAmount = "assets/icons/total_invested_amount.svg";
 
