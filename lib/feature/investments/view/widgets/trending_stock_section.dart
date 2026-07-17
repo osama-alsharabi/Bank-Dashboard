@@ -1,5 +1,6 @@
 import 'package:bank_dashboard/core/utils/app_color.dart';
 import 'package:bank_dashboard/core/utils/app_text_style.dart';
+import 'package:bank_dashboard/feature/investments/view/widgets/trending_stock_container.dart';
 import 'package:flutter/material.dart';
 
 class TrendingStockSection extends StatelessWidget {
@@ -16,6 +17,7 @@ class TrendingStockSection extends StatelessWidget {
             color: AppColor.secondaryColor,
           ),
         ),
+        const TrendingStockContainer(),
       ],
     );
   }
