@@ -38,7 +38,10 @@ class InvestmentsView extends StatelessWidget {
                 ),
               ),
               Padding(
-                padding: EdgeInsetsGeometry.symmetric(horizontal: 16),
+                padding: EdgeInsetsGeometry.symmetric(
+                  horizontal: 16,
+                  vertical: 16,
+                ),
                 child: MyInvestmentSection(),
               ),
             ],
