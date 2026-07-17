@@ -31,6 +31,7 @@ class InvestmentsView extends StatelessWidget {
                 child: Row(
                   children: [
                     Expanded(child: YearlyTotalInvestmentSection()),
+                    SizedBox(width: 16),
                     Expanded(child: MonthlyRevenueSection()),
                   ],
                 ),
