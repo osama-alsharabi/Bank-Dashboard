@@ -12,7 +12,12 @@ class MyInvestmentListView extends StatelessWidget {
       physics: const NeverScrollableScrollPhysics(),
       itemCount: MyInvestmentData.data.length,
       itemBuilder: (context, index) {
-        return const MyInvestmentItem();
+        return Padding(
+          padding: const EdgeInsets.symmetric(vertical: 7.5),
+          child: MyInvestmentItem(
+            myInvestmentModel: MyInvestmentData.data[index],
+          ),
+        );
       },
     );
   }

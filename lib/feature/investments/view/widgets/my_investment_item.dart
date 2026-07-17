@@ -1,11 +1,12 @@
-import 'package:bank_dashboard/core/utils/app_assets.dart';
 import 'package:bank_dashboard/core/utils/app_color.dart';
 import 'package:bank_dashboard/core/utils/app_text_style.dart';
+import 'package:bank_dashboard/feature/investments/model/my_investment_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 class MyInvestmentItem extends StatelessWidget {
-  const MyInvestmentItem({super.key});
+  final MyInvestmentModel myInvestmentModel;
+  const MyInvestmentItem({super.key, required this.myInvestmentModel});
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +24,7 @@ class MyInvestmentItem extends StatelessWidget {
               borderRadius: BorderRadius.circular(20),
               color: const Color(0xffFFE0EB),
             ),
-            child: SvgPicture.asset(AppAssets.iconsAccountExpense),
+            child: SvgPicture.asset(myInvestmentModel.icon),
           ),
           const SizedBox(width: 20),
           Expanded(
@@ -31,11 +32,11 @@ class MyInvestmentItem extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  "Apple Store",
+                  myInvestmentModel.name,
                   style: context.textStyle.textStyleRegular16,
                 ),
                 Text(
-                  "E-commerce, Marketplace",
+                  myInvestmentModel.category,
                   style: context.textStyle.textStyleRegular15.copyWith(
                     color: AppColor.customGreyColor,
                   ),
@@ -47,7 +48,10 @@ class MyInvestmentItem extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text("\$54,000", style: context.textStyle.textStyleRegular16),
+                Text(
+                  "\$${myInvestmentModel.investmentValue.toStringAsFixed(0)}",
+                  style: context.textStyle.textStyleRegular16,
+                ),
                 Text(
                   "Envestment Value",
                   style: context.textStyle.textStyleRegular15.copyWith(
@@ -62,9 +66,15 @@ class MyInvestmentItem extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  "+16%",
+                  myInvestmentModel.isPositive
+                      ? r"+"
+                            "${myInvestmentModel.returnPercentage}%"
+                      : "-"
+                            "${myInvestmentModel.returnPercentage}%",
                   style: context.textStyle.textStyleRegular16.copyWith(
-                    color: AppColor.successColor,
+                    color: myInvestmentModel.isPositive
+                        ? AppColor.successColor
+                        : AppColor.failureColor,
                   ),
                 ),
                 Text(
