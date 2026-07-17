@@ -2,6 +2,7 @@ import 'package:bank_dashboard/core/widgets/custom_app_bar.dart';
 import 'package:bank_dashboard/feature/investments/view/widgets/investments_header.dart';
 import 'package:bank_dashboard/feature/investments/view/widgets/monthly_revenue_section.dart';
 import 'package:bank_dashboard/feature/investments/view/widgets/my_investment_section.dart';
+import 'package:bank_dashboard/feature/investments/view/widgets/trending_stock_section.dart';
 import 'package:bank_dashboard/feature/investments/view/widgets/yearly_total_investment_section.dart';
 import 'package:flutter/material.dart';
 
@@ -42,7 +43,13 @@ class InvestmentsView extends StatelessWidget {
                   horizontal: 16,
                   vertical: 16,
                 ),
-                child: MyInvestmentSection(),
+                child: Row(
+                  children: [
+                    Expanded(flex: 2, child: MyInvestmentSection()),
+                    SizedBox(width: 16),
+                    Expanded(child: TrendingStockSection()),
+                  ],
+                ),
               ),
             ],
           ),
