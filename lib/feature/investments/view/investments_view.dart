@@ -44,6 +44,7 @@ class InvestmentsView extends StatelessWidget {
                   vertical: 16,
                 ),
                 child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Expanded(flex: 2, child: MyInvestmentSection()),
                     SizedBox(width: 16),

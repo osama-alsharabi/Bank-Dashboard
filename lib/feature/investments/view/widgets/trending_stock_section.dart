@@ -17,6 +17,7 @@ class TrendingStockSection extends StatelessWidget {
             color: AppColor.secondaryColor,
           ),
         ),
+        const SizedBox(height: 16),
         const TrendingStockContainer(),
       ],
     );

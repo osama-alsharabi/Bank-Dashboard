@@ -1,3 +1,5 @@
+import 'package:bank_dashboard/feature/investments/data/trending_stock_table_data.dart';
+import 'package:bank_dashboard/feature/investments/view/widgets/generate_trending_stock_table.dart';
 import 'package:bank_dashboard/feature/investments/view/widgets/trending_stock_table_header.dart';
 import 'package:flutter/material.dart';
 
@@ -9,8 +11,10 @@ class TrendingStockTable extends StatelessWidget {
     return Table(
       children: [
         trendingStrockTableHeader(context),
+        ...TrendingStockTableData.data.map(
+          (e) => generateTrendingStockTable(data: e),
+        ),
       ],
     );
   }
-
 }
