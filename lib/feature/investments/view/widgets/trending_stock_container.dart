@@ -1,3 +1,4 @@
+import 'package:bank_dashboard/feature/investments/view/widgets/trending_stock_table.dart';
 import 'package:flutter/material.dart';
 
 class TrendingStockContainer extends StatelessWidget {
@@ -11,6 +12,7 @@ class TrendingStockContainer extends StatelessWidget {
         color: Colors.white,
         borderRadius: BorderRadius.circular(25),
       ),
+      child: const TrendingStockTable(),
     );
   }
 }
