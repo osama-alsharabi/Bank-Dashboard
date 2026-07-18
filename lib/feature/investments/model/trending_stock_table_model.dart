@@ -4,7 +4,7 @@ class TrendingStockTableModel {
   final double price;
   final double returnPrecent;
 
-  TrendingStockTableModel({
+  const TrendingStockTableModel({
     required this.sLNo,
     required this.name,
     required this.price,
