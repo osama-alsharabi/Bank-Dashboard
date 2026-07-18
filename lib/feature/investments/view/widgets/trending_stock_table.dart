@@ -1,3 +1,4 @@
+import 'package:bank_dashboard/feature/investments/view/widgets/trending_stock_table_header.dart';
 import 'package:flutter/material.dart';
 
 class TrendingStockTable extends StatelessWidget {
@@ -5,6 +6,11 @@ class TrendingStockTable extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const SizedBox();
+    return Table(
+      children: [
+        trendingStrockTableHeader(context),
+      ],
+    );
   }
+
 }
