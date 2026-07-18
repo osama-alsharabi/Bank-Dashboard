@@ -8,7 +8,10 @@ TableRow generateTrendingStockTable({required TrendingStockTableModel data}) {
         padding: const EdgeInsets.all(15.0),
         child: Text(data.sLNo.toString()),
       ),
-      Padding(padding: const EdgeInsets.all(15.0), child: Text(data.name)),
+      Padding(
+        padding: const EdgeInsets.all(15.0),
+        child: FittedBox(fit: BoxFit.scaleDown, child: Text(data.name)),
+      ),
       Padding(
         padding: const EdgeInsets.all(15.0),
         child: Text(data.price.toStringAsFixed(0)),

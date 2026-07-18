@@ -9,37 +9,49 @@ TableRow trendingStrockTableHeader(BuildContext context) {
     children: [
       Padding(
         padding: const EdgeInsets.all(15),
-        child: Text(
-          "SL No",
-          style: context.textStyle.textStyleRegular16.copyWith(
-            color: const Color(0xff718EBF),
+        child: FittedBox(
+          fit: BoxFit.scaleDown,
+          child: Text(
+            "SL No",
+            style: context.textStyle.textStyleRegular16.copyWith(
+              color: const Color(0xff718EBF),
+            ),
           ),
         ),
       ),
       Padding(
         padding: const EdgeInsets.all(15),
-        child: Text(
-          "Name",
-          style: context.textStyle.textStyleRegular16.copyWith(
-            color: const Color(0xff718EBF),
+        child: FittedBox(
+          fit: BoxFit.scaleDown,
+          child: Text(
+            "Name",
+            style: context.textStyle.textStyleRegular16.copyWith(
+              color: const Color(0xff718EBF),
+            ),
           ),
         ),
       ),
       Padding(
         padding: const EdgeInsets.all(15),
-        child: Text(
-          "Price",
-          style: context.textStyle.textStyleRegular16.copyWith(
-            color: const Color(0xff718EBF),
+        child: FittedBox(
+          fit: BoxFit.scaleDown,
+          child: Text(
+            "Price",
+            style: context.textStyle.textStyleRegular16.copyWith(
+              color: const Color(0xff718EBF),
+            ),
           ),
         ),
       ),
       Padding(
         padding: const EdgeInsets.all(15),
-        child: Text(
-          "Return",
-          style: context.textStyle.textStyleRegular16.copyWith(
-            color: const Color(0xff718EBF),
+        child: FittedBox(
+          fit: BoxFit.scaleDown,
+          child: Text(
+            "Return",
+            style: context.textStyle.textStyleRegular16.copyWith(
+              color: const Color(0xff718EBF),
+            ),
           ),
         ),
       ),
