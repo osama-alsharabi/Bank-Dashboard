@@ -1,4 +1,5 @@
 import 'package:bank_dashboard/core/widgets/custom_app_bar.dart';
+import 'package:bank_dashboard/feature/overview/view/widgets/my_card_section.dart';
 import 'package:flutter/material.dart';
 
 class CreditCardsBody extends StatelessWidget {
@@ -15,6 +16,12 @@ class CreditCardsBody extends StatelessWidget {
           collapsedHeight: 80,
           toolbarHeight: 80,
           flexibleSpace: CustomAppBar(title: "Credit Cards"),
+        ),
+        SliverPadding(
+          padding: EdgeInsetsGeometry.symmetric(horizontal: 16),
+          sliver: SliverToBoxAdapter(
+            child: Column(children: [SizedBox(height: 16), MyCardSection()]),
+          ),
         ),
       ],
     );
