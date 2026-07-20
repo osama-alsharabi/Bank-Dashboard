@@ -1,5 +1,6 @@
 import 'package:bank_dashboard/core/utils/app_color.dart';
 import 'package:bank_dashboard/core/utils/app_text_style.dart';
+import 'package:bank_dashboard/feature/credit_cards/view/widgets/card_expense_statistics_chart.dart';
 import 'package:flutter/material.dart';
 
 class CardExpenseStatisticsSection extends StatelessWidget {
@@ -16,7 +17,7 @@ class CardExpenseStatisticsSection extends StatelessWidget {
           ),
         ),
         const SizedBox(height: 16),
-        
+        const CardExpenseStatisticsChart(),
       ],
     );
   }
