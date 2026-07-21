@@ -1,5 +1,6 @@
 import 'package:bank_dashboard/core/utils/app_color.dart';
 import 'package:bank_dashboard/core/utils/app_text_style.dart';
+import 'package:bank_dashboard/feature/credit_cards/view/widgets/add_new_card_text_field_with_title.dart';
 import 'package:flutter/material.dart';
 
 class AddNewCardContainerBody extends StatelessWidget {
@@ -14,6 +15,12 @@ class AddNewCardContainerBody extends StatelessWidget {
           style: context.textStyle.textStyleRegular16.copyWith(
             color: AppColor.customSecondaryGreyColor,
           ),
+        ),
+        const SizedBox(height: 16),
+        const AddNewCardTextFieldWithTitle(
+          hasArrowIcon: false,
+          hint: "Classic",
+          title: "Card Type",
         ),
       ],
     );
