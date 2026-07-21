@@ -18,6 +18,8 @@ class AppAssets {
 
   static const String iconsCreditCard = "assets/icons/credit_card.svg";
 
+  static const String iconsCreditCardCardList = "assets/icons/credit_card_card_list.svg";
+
   static const String iconsDeposit = "assets/icons/deposit.svg";
 
   static const String iconsEmillyWilsonIcon = "assets/icons/emilly_wilson_icon.svg";
