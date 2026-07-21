@@ -19,7 +19,7 @@ class AddNewCardTextFieldWithTitle extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text("Card Type", style: context.textStyle.textStyleRegular16),
+        Text(title, style: context.textStyle.textStyleRegular16),
         const SizedBox(height: 10),
         Container(
           width: double.infinity,
@@ -32,7 +32,7 @@ class AddNewCardTextFieldWithTitle extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                "Classic",
+                hint  ,
                 style: context.textStyle.textStyleRegular16.copyWith(
                   color: AppColor.customSecondaryGreyColor,
                 ),
