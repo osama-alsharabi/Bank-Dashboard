@@ -24,7 +24,7 @@ class _CardExpenseStatisticsChartState extends State<CardExpenseStatisticsChart>
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 310,
+      height: 350,
       padding: const EdgeInsets.all(25),
       decoration: BoxDecoration(
         color: Colors.white,
