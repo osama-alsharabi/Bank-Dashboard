@@ -10,6 +10,7 @@ class CardListItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      margin: const EdgeInsets.only(bottom: 15),
       padding: const EdgeInsets.symmetric(vertical: 23, horizontal: 16),
       decoration: BoxDecoration(
         color: Colors.white,

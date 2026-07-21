@@ -1,6 +1,6 @@
 import 'package:bank_dashboard/core/utils/app_color.dart';
 import 'package:bank_dashboard/core/utils/app_text_style.dart';
-import 'package:bank_dashboard/feature/credit_cards/view/widgets/card_list_item.dart';
+import 'package:bank_dashboard/feature/credit_cards/view/widgets/card_list_section_list_view.dart';
 import 'package:flutter/material.dart';
 
 class CardListSection extends StatelessWidget {
@@ -18,7 +18,7 @@ class CardListSection extends StatelessWidget {
           ),
         ),
         const SizedBox(height: 16),
-        const CardListItem(),
+        const CardListSectionListView(),
       ],
     );
   }
