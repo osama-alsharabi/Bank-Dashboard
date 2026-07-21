@@ -43,6 +43,7 @@ class CreditCardsBody extends StatelessWidget {
                     Expanded(child: SizedBox()),
                   ],
                 ),
+                SizedBox(height: 16),
               ],
             ),
           ),

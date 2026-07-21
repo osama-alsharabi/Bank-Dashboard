@@ -1,3 +1,4 @@
+import 'package:bank_dashboard/feature/credit_cards/view/widgets/add_new_card_button.dart';
 import 'package:bank_dashboard/feature/credit_cards/view/widgets/add_new_card_text_field_with_title.dart';
 import 'package:flutter/material.dart';
 
@@ -7,6 +8,7 @@ class AddNewCardForm extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Row(
           children: [
@@ -47,6 +49,8 @@ class AddNewCardForm extends StatelessWidget {
             ),
           ],
         ),
+        SizedBox(height: 16),
+        AddNewCardButton(),
       ],
     );
   }
