@@ -1,11 +1,13 @@
 import 'package:bank_dashboard/core/utils/app_assets.dart';
 import 'package:bank_dashboard/core/utils/app_color.dart';
 import 'package:bank_dashboard/core/utils/app_text_style.dart';
+import 'package:bank_dashboard/feature/credit_cards/model/card_list_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class CardListItem extends StatelessWidget {
-  const CardListItem({super.key});
+  final CardListModel cardListModel;
+  const CardListItem({super.key, required this.cardListModel});
 
   @override
   Widget build(BuildContext context) {
@@ -21,10 +23,16 @@ class CardListItem extends StatelessWidget {
           Container(
             padding: const EdgeInsets.all(17),
             decoration: BoxDecoration(
-              color: Colors.amber,
+              color: cardListModel.color.withAlpha(30),
               borderRadius: BorderRadius.circular(20),
             ),
-            child: SvgPicture.asset(AppAssets.iconsAccountExpense),
+            child: SvgPicture.asset(
+              AppAssets.iconsCreditCardCardList,
+              colorFilter: ColorFilter.mode(
+                cardListModel.color,
+                BlendMode.srcIn,
+              ),
+            ),
           ),
           const SizedBox(width: 16),
           Expanded(
@@ -42,7 +50,7 @@ class CardListItem extends StatelessWidget {
                 FittedBox(
                   fit: BoxFit.scaleDown,
                   child: Text(
-                    "Secondary",
+                    cardListModel.cardType,
                     style: context.textStyle.textStyleRegular15.copyWith(
                       color: AppColor.customSecondaryGreyColor,
                     ),
@@ -67,7 +75,7 @@ class CardListItem extends StatelessWidget {
                 FittedBox(
                   fit: BoxFit.scaleDown,
                   child: Text(
-                    "Secondary",
+                    cardListModel.bank,
                     style: context.textStyle.textStyleRegular15.copyWith(
                       color: AppColor.customSecondaryGreyColor,
                     ),
@@ -92,7 +100,7 @@ class CardListItem extends StatelessWidget {
                 FittedBox(
                   fit: BoxFit.scaleDown,
                   child: Text(
-                    "**** **** 5600",
+                    cardListModel.cardNumber,
                     style: context.textStyle.textStyleRegular15.copyWith(
                       color: AppColor.customSecondaryGreyColor,
                     ),
@@ -118,7 +126,7 @@ class CardListItem extends StatelessWidget {
                   fit: BoxFit.scaleDown,
 
                   child: Text(
-                    "Secondary",
+                    cardListModel.cardType,
                     style: context.textStyle.textStyleRegular15.copyWith(
                       color: AppColor.customSecondaryGreyColor,
                     ),
@@ -145,7 +153,7 @@ class CardListItem extends StatelessWidget {
                   fit: BoxFit.scaleDown,
 
                   child: Text(
-                    "William",
+                    cardListModel.namainCard,
                     style: context.textStyle.textStyleRegular15.copyWith(
                       color: AppColor.customSecondaryGreyColor,
                     ),

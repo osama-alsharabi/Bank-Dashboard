@@ -12,7 +12,7 @@ class CardListSectionListView extends StatelessWidget {
       physics: const NeverScrollableScrollPhysics(),
       itemCount: CardListData.data.length,
       itemBuilder: (context, index) {
-        return const CardListItem();
+        return CardListItem(cardListModel: CardListData.data[index]);
       },
     );
   }
