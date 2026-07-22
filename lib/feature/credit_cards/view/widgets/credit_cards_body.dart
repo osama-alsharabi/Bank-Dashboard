@@ -41,6 +41,7 @@ class CreditCardsBody extends StatelessWidget {
                 Row(
                   children: [
                     Expanded(flex: 2, child: AddNewCardSection()),
+                    SizedBox(width: 16),
                     Expanded(child: CardSettingSection()),
                   ],
                 ),
