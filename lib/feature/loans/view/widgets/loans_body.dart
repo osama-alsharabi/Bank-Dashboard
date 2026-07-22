@@ -20,7 +20,9 @@ class LoandsBody extends StatelessWidget {
         SliverPadding(
           padding: EdgeInsetsGeometry.symmetric(horizontal: 16),
           sliver: SliverToBoxAdapter(
-            child: Column(children: [LoansHeaderSection()]),
+            child: Column(
+              children: [SizedBox(height: 16), LoansHeaderSection()],
+            ),
           ),
         ),
       ],
