@@ -1,4 +1,5 @@
 import 'package:bank_dashboard/core/widgets/custom_app_bar.dart';
+import 'package:bank_dashboard/feature/loans/view/widgets/loans_header_section.dart';
 import 'package:flutter/material.dart';
 
 class LoandsBody extends StatelessWidget {
@@ -15,6 +16,12 @@ class LoandsBody extends StatelessWidget {
           collapsedHeight: 80,
           toolbarHeight: 80,
           flexibleSpace: CustomAppBar(title: "Loans"),
+        ),
+        SliverPadding(
+          padding: EdgeInsetsGeometry.symmetric(horizontal: 16),
+          sliver: SliverToBoxAdapter(
+            child: Column(children: [LoansHeaderSection()]),
+          ),
         ),
       ],
     );
