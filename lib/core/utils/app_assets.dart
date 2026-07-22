@@ -12,7 +12,15 @@ class AppAssets {
 
   static const String iconsAccounts = "assets/icons/accounts.svg";
 
+  static const String iconsAddToApplePay = "assets/icons/add_to_apple_pay.svg";
+
+  static const String iconsAddToGooglePay = "assets/icons/add_to_google_pay.svg";
+
   static const String iconsApple = "assets/icons/apple.svg";
+
+  static const String iconsBlockCard = "assets/icons/block_card.svg";
+
+  static const String iconsChangePinCode = "assets/icons/change_pin_code.svg";
 
   static const String iconsChipCard = "assets/icons/chip_card.png";
 
