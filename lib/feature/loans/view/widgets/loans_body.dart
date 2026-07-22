@@ -1,4 +1,5 @@
 import 'package:bank_dashboard/core/widgets/custom_app_bar.dart';
+import 'package:bank_dashboard/feature/loans/view/widgets/active_loans_overview_section.dart';
 import 'package:bank_dashboard/feature/loans/view/widgets/loans_header_section.dart';
 import 'package:flutter/material.dart';
 
@@ -21,7 +22,12 @@ class LoandsBody extends StatelessWidget {
           padding: EdgeInsetsGeometry.symmetric(horizontal: 16),
           sliver: SliverToBoxAdapter(
             child: Column(
-              children: [SizedBox(height: 16), LoansHeaderSection()],
+              children: [
+                SizedBox(height: 16),
+                LoansHeaderSection(),
+                SizedBox(height: 16),
+                ActiveLoansOverviewSection(),
+              ],
             ),
           ),
         ),
