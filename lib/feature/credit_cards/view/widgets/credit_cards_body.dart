@@ -2,6 +2,7 @@ import 'package:bank_dashboard/core/widgets/custom_app_bar.dart';
 import 'package:bank_dashboard/feature/credit_cards/view/widgets/add_new_card_section.dart';
 import 'package:bank_dashboard/feature/credit_cards/view/widgets/card_expense_statistics_section.dart';
 import 'package:bank_dashboard/feature/credit_cards/view/widgets/card_list_section.dart';
+import 'package:bank_dashboard/feature/credit_cards/view/widgets/card_setting_section.dart';
 import 'package:bank_dashboard/feature/overview/view/widgets/my_card_section.dart';
 import 'package:flutter/material.dart';
 
@@ -40,7 +41,7 @@ class CreditCardsBody extends StatelessWidget {
                 Row(
                   children: [
                     Expanded(flex: 2, child: AddNewCardSection()),
-                    Expanded(child: SizedBox()),
+                    Expanded(child: CardSettingSection()),
                   ],
                 ),
                 SizedBox(height: 16),
