@@ -1,3 +1,4 @@
+import 'package:bank_dashboard/feature/loans/view/widgets/loans_body.dart';
 import 'package:flutter/material.dart';
 
 class LoansView extends StatelessWidget {
@@ -5,6 +6,6 @@ class LoansView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return const Scaffold(body: LoandsBody());
   }
 }
