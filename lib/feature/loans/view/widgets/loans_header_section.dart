@@ -13,8 +13,8 @@ class LoansHeaderSection extends StatelessWidget {
           .entries
           .map(
             (e) => Padding(
-              padding: EdgeInsets.symmetric(horizontal: e.key == 0 ? 0 : 15.0),
-              child: const LoansHeaderItem(),
+              padding: EdgeInsets.only(left: e.key == 0 ? 0 : 15.0, right: 15),
+              child: LoansHeaderItem(loansHeaderModel: e.value),
             ),
           )
           .toList(),
