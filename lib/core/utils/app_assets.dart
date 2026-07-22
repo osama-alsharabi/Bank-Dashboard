@@ -20,13 +20,19 @@ class AppAssets {
 
   static const String iconsBlockCard = "assets/icons/block_card.svg";
 
+  static const String iconsBusinessLoans = "assets/icons/business_loans.svg";
+
   static const String iconsChangePinCode = "assets/icons/change_pin_code.svg";
 
   static const String iconsChipCard = "assets/icons/chip_card.png";
 
+  static const String iconsCorporateLoans = "assets/icons/corporate_loans.svg";
+
   static const String iconsCreditCard = "assets/icons/credit_card.svg";
 
   static const String iconsCreditCardCardList = "assets/icons/credit_card_card_list.svg";
+
+  static const String iconsCustomLoans = "assets/icons/custom_loans.svg";
 
   static const String iconsDeposit = "assets/icons/deposit.svg";
 
