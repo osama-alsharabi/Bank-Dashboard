@@ -12,9 +12,16 @@ class LoansHeaderSection extends StatelessWidget {
           .asMap()
           .entries
           .map(
-            (e) => Padding(
-              padding: EdgeInsets.only(left: e.key == 0 ? 0 : 15.0, right: 15),
-              child: LoansHeaderItem(loansHeaderModel: e.value),
+            (e) => Expanded(
+              child: FittedBox(
+                child: Padding(
+                  padding: EdgeInsets.only(
+                    left: e.key == 0 ? 0 : 15.0,
+                    right: 15,
+                  ),
+                  child: LoansHeaderItem(loansHeaderModel: e.value),
+                ),
+              ),
             ),
           )
           .toList(),
