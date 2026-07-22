@@ -1,3 +1,4 @@
+import 'package:bank_dashboard/feature/credit_cards/data/card_setting_data.dart';
 import 'package:bank_dashboard/feature/credit_cards/view/widgets/card_setting_item.dart';
 import 'package:flutter/material.dart';
 
@@ -14,10 +15,13 @@ class CardSettingContainer extends StatelessWidget {
         borderRadius: BorderRadius.circular(25),
       ),
       child: ListView.builder(
+        itemCount: CardSettingData.data.length,
         itemBuilder: (context, index) {
-          return const Padding(
-            padding: EdgeInsets.only(bottom: 10.0),
-            child: CardSettingItem(),
+          return Padding(
+            padding: const EdgeInsets.only(bottom: 20.0),
+            child: CardSettingItem(
+              cardSettingModel: CardSettingData.data[index],
+            ),
           );
         },
       ),

@@ -1,11 +1,12 @@
-import 'package:bank_dashboard/core/utils/app_assets.dart';
 import 'package:bank_dashboard/core/utils/app_color.dart';
 import 'package:bank_dashboard/core/utils/app_text_style.dart';
+import 'package:bank_dashboard/feature/credit_cards/model/card_setting_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 class CardSettingItem extends StatelessWidget {
-  const CardSettingItem({super.key});
+  final CardSettingModel cardSettingModel;
+  const CardSettingItem({super.key, required this.cardSettingModel});
 
   @override
   Widget build(BuildContext context) {
@@ -14,18 +15,21 @@ class CardSettingItem extends StatelessWidget {
         Container(
           padding: const EdgeInsets.all(18),
           decoration: BoxDecoration(
-            color: Colors.amber,
+            color: cardSettingModel.color.withAlpha(50),
             borderRadius: BorderRadius.circular(20),
           ),
-          child: SvgPicture.asset(AppAssets.iconsApple),
+          child: SvgPicture.asset(cardSettingModel.icon),
         ),
         const SizedBox(width: 16),
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text("Block Card", style: context.textStyle.textStyleSemibold16),
             Text(
-              "Instantly block your card",
+              cardSettingModel.title,
+              style: context.textStyle.textStyleSemibold16,
+            ),
+            Text(
+              cardSettingModel.description,
               style: context.textStyle.textStyleRegular15.copyWith(
                 color: AppColor.customSecondaryGreyColor,
               ),
