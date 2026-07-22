@@ -1,5 +1,6 @@
 import 'package:bank_dashboard/core/utils/app_color.dart';
 import 'package:bank_dashboard/core/utils/app_text_style.dart';
+import 'package:bank_dashboard/feature/credit_cards/view/widgets/card_setting_container.dart';
 import 'package:flutter/material.dart';
 
 class CardSettingSection extends StatelessWidget {
@@ -14,8 +15,10 @@ class CardSettingSection extends StatelessWidget {
           "Card Setting",
           style: context.textStyle.textStyleSemibold22.copyWith(
             color: AppColor.secondaryColor,
-            ),
+          ),
         ),
+        const SizedBox(height: 16),
+        const CardSettingContainer(),
       ],
     );
   }
