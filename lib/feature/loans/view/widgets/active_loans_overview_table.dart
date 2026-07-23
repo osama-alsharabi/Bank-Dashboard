@@ -1,4 +1,4 @@
-import 'package:bank_dashboard/core/utils/app_color.dart';
+import 'package:bank_dashboard/feature/loans/view/widgets/active_loans_table_data.dart';
 import 'package:bank_dashboard/feature/loans/view/widgets/active_loans_table_header.dart';
 import 'package:flutter/material.dart';
 
@@ -15,13 +15,10 @@ class ActiveLoansOverViewTable extends StatelessWidget {
         borderRadius: BorderRadius.circular(25),
       ),
       child: Table(
-        border: const TableBorder(
-          bottom: BorderSide(
-            width: 0.3,
-            color: AppColor.customSecondaryGreyColor,
-          ),
-        ),
-        children: [activeLoansTableHeader(context)],
+        children: [
+          activeLoansTableHeader(context),
+          ...activeLoansTableData(context),
+        ],
       ),
     );
   }

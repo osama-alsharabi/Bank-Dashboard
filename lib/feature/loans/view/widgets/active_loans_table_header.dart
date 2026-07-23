@@ -13,6 +13,14 @@ const List<String> tableHeader = [
 ];
 TableRow activeLoansTableHeader(BuildContext context) {
   return TableRow(
+    decoration: const BoxDecoration(
+      border: Border(
+        bottom: BorderSide(
+          width: 0.3,
+          color: AppColor.customSecondaryGreyColor,
+        ),
+      ),
+    ),
     children: tableHeader
         .map(
           (e) => Padding(

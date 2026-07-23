@@ -27,6 +27,7 @@ class LoandsBody extends StatelessWidget {
                 LoansHeaderSection(),
                 SizedBox(height: 16),
                 ActiveLoansOverviewSection(),
+                SizedBox(height: 16),
               ],
             ),
           ),
