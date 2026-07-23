@@ -1,0 +1,86 @@
+import 'package:bank_dashboard/feature/loans/model/active_loans_overview_table_model.dart';
+
+abstract class ActiveLoansOverviewTableData {
+  static const List<ActiveLoansOverviewTableModel> data = [
+    ActiveLoansOverviewTableModel(
+      sLNo: 01,
+      loanMoney: 100000,
+      leftToRepay: 40500,
+      duration: "8 Months",
+      interestRate: 12,
+      installment: "\$2,000 / month",
+    ),
+    ActiveLoansOverviewTableModel(
+      sLNo: 02,
+      loanMoney: 500000,
+      leftToRepay: 250000,
+      duration: "36 Months",
+      interestRate: 10,
+      installment: "\$8,000 / month",
+    ),
+    ActiveLoansOverviewTableModel(
+      sLNo: 03,
+      loanMoney: 900000,
+      leftToRepay: 40500,
+      duration: "12 Months",
+      interestRate: 12,
+      installment: "\$5,000 / month",
+    ),
+    ActiveLoansOverviewTableModel(
+      sLNo: 04,
+      loanMoney: 50000,
+      leftToRepay: 40500,
+      duration: "5 Months",
+      interestRate: 16,
+      installment: "\$10,000 / month",
+    ),
+    ActiveLoansOverviewTableModel(
+      sLNo: 05,
+      loanMoney: 50000,
+      leftToRepay: 40500,
+      duration: "5 Months",
+      interestRate: 16,
+      installment: "\$10,000 / month",
+    ),
+    ActiveLoansOverviewTableModel(
+      sLNo: 06,
+      loanMoney: 50000,
+      leftToRepay: 40500,
+      duration: "5 Months",
+      interestRate: 16,
+      installment: "\$10,000 / month",
+    ),
+    ActiveLoansOverviewTableModel(
+      sLNo: 07,
+      loanMoney: 50000,
+      leftToRepay: 40500,
+      duration: "5 Months",
+      interestRate: 16,
+      installment: "\$10,000 / month",
+    ),
+    ActiveLoansOverviewTableModel(
+      sLNo: 08,
+      loanMoney: 50000,
+      leftToRepay: 40500,
+      duration: "5 Months",
+      interestRate: 16,
+      installment: "\$10,000 / month",
+    ),
+    ActiveLoansOverviewTableModel(
+      sLNo: 09,
+      loanMoney: 50000,
+      leftToRepay: 40500,
+      duration: "5 Months",
+      interestRate: 16,
+      installment: "\$10,000 / month",
+    ),
+    ActiveLoansOverviewTableModel(
+      sLNo: 10,
+      loanMoney: 50000,
+      leftToRepay: 40500,
+      duration: "5 Months",
+      interestRate: 16,
+      installment: "\$10,000 / month",
+    ),
+  ];
+}
