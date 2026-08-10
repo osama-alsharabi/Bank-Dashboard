@@ -11,13 +11,13 @@ abstract class ServicesHeaderData {
       color: Color(0xff396AFF),
     ),
     ServicesHeaderModel(
-      icon: AppAssets.iconsLifeInsurance,
+      icon: AppAssets.iconsShopping,
       title: "Shopping",
       description: "Buy. Think. Grow",
       color: Color(0xffFFBB38),
     ),
     ServicesHeaderModel(
-      icon: AppAssets.iconsLifeInsurance,
+      icon: AppAssets.iconsSafety,
       title: "Safety",
       description: "We are your allies",
       color: Color(0xff16DBCC),

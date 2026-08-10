@@ -1,3 +1,4 @@
+import 'package:bank_dashboard/feature/services/data/services_header_data.dart';
 import 'package:bank_dashboard/feature/services/view/widgets/services_item_header.dart';
 import 'package:flutter/material.dart';
 
@@ -6,12 +7,10 @@ class ServicesHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Row(
-      children: [
-        ServicesItemHeader(),
-        ServicesItemHeader(),
-        ServicesItemHeader(),
-      ],
+    return Row(
+      children: ServicesHeaderData.data
+          .map((e) => ServicesItemHeader(servicesHeaderModel: e))
+          .toList(),
     );
   }
 }
