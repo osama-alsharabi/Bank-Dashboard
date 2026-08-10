@@ -6,6 +6,7 @@ import 'package:bank_dashboard/feature/credit_cards/view/credit_cards_view.dart'
 import 'package:bank_dashboard/feature/investments/view/investments_view.dart';
 import 'package:bank_dashboard/feature/loans/view/loans_view.dart';
 import 'package:bank_dashboard/feature/overview/view/overview_view.dart';
+import 'package:bank_dashboard/feature/services/view/services_view.dart';
 import 'package:bank_dashboard/feature/transactions/view/transactions_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -41,7 +42,7 @@ class BodyBlocBuilder extends StatelessWidget {
             case Loans():
               return const Expanded(child: LoansView());
             case Services():
-              return const SizedBox();
+              return const Expanded(child: ServicesView());
             case MyPrivileges():
               return const SizedBox();
             case Setting():
