@@ -62,7 +62,17 @@ class CustomAppBar extends StatelessWidget {
             child: SvgPicture.asset(AppAssets.iconsNotification),
           ),
           const SizedBox(width: 35),
-          Image.asset(AppAssets.imagesUserProfile),
+          Container(
+            height: 40,
+            width: 40,
+            decoration: const BoxDecoration(
+              shape: BoxShape.circle,
+              image: DecorationImage(
+                image: AssetImage(AppAssets.imagesUserProfile),
+                fit: BoxFit.cover,
+              ),
+            ),
+          ),
           const SizedBox(width: 40),
         ],
       ),
